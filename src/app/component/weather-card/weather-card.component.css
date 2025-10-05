@@ -1,0 +1,13 @@
+/* Fondos según el clima */
+.fondo-sunny {
+  background: linear-gradient(to top, #fddb92, #d1fdff); /* amarillo cielo */
+}
+.fondo-cloudy {
+  background: linear-gradient(to top, #bdc3c7, #2c3e50); /* gris nuboso */
+}
+.fondo-rainy {
+  background: linear-gradient(to top, #4e54c8, #8f94fb); /* azul lluvioso */
+}
+.fondo-snowy {
+  background: linear-gradient(to top, #e0eafc, #cfdef3); /* blanco azulado */
+}
