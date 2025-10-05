@@ -1,8 +1,8 @@
 <div class="container vh-100 d-flex align-items-center justify-content-center">
   <section class="w-50">
-    <app-search (citySearch)="onCitySearch($event)"></app-search>
-    @if (selectedCity !== '') {
-      <app-weather-card [city]="selectedCity"></app-weather-card>
+    <app-search (citySelected)="onCitySelected($event)"></app-search>
+    @if (selectedCity) {
+      <app-weather-card [city]="selectedCity.name"></app-weather-card>
     }
   </section>
 </div>

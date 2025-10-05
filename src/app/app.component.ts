@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SearchComponent } from './component/search/search.component';
 import { WeatherCardComponent } from "./component/weather-card/weather-card.component";
-import { WeatherService } from './service/weather.service';
+import { City } from './models/city.model';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +12,9 @@ import { WeatherService } from './service/weather.service';
 })
 export class AppComponent {
   title = 'tiempo-app';
-  selectedCity: string = '';
+  selectedCity: City | null = null;
 
-  onCitySearch(city: string) {
+  onCitySelected(city: City) {
     this.selectedCity = city;
   }
 }

@@ -4,3 +4,8 @@
     <i class="bi bi-search"></i>
   </button>
 </div>
+<app-city-list 
+  [cities]="filteredCities" 
+  [hasSearched]="hasSearched"
+  (citySelected)="onCitySelected($event)">
+</app-city-list>
