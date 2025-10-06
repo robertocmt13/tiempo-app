@@ -1,13 +1,104 @@
-/* Backgrounds by weather */
-.background-sunny {
-  background: linear-gradient(to top, #fddb92, #d1fdff); /* yellow sky */
+/* === FONDOS POR CONDICIÓN === */
+.background-clear {
+  background: linear-gradient(to top, #fddb92, #d1fdff); /* día soleado */
 }
-.background-cloudy {
-  background: linear-gradient(to top, #bdc3c7, #2c3e50); /* cloudy gray */
+
+.background-clouds {
+  background: linear-gradient(to top, #bdc3c7, #2c3e50); /* nublado */
 }
-.background-rainy {
-  background: linear-gradient(to top, #4e54c8, #8f94fb); /* rainy blue */
+
+.background-rain {
+  background: linear-gradient(to top, #4e54c8, #8f94fb); /* lluvia */
 }
-.background-snowy {
-  background: linear-gradient(to top, #e0eafc, #cfdef3); /* snowy white-blue */
+
+.background-drizzle {
+  background: linear-gradient(to top, #74ebd5, #ACB6E5); /* llovizna */
+}
+
+.background-thunderstorm {
+  background: linear-gradient(to top, #232526, #414345); /* tormenta oscura */
+}
+
+.background-snow {
+  background: linear-gradient(to top, #e0eafc, #cfdef3); /* nieve */
+}
+
+.background-mist,
+.background-fog,
+.background-haze {
+  background: linear-gradient(to top, #d7d2cc, #304352); /* niebla/grisáceo */
+}
+
+.background-smoke,
+.background-dust,
+.background-sand,
+.background-ash {
+  background: linear-gradient(to top, #757f9a, #d7dde8); /* ambiente polvoriento */
+}
+
+.background-squall {
+  background: linear-gradient(to top, #373B44, #4286f4); /* chubasco */
+}
+
+.background-tornado {
+  background: linear-gradient(to top, #232526, #414345); /* tornado oscuro */
+}
+
+/* === TEXTO / ICONOS === */
+.text-clear {
+  color: #cc8b00;
+}
+.text-clouds {
+  color: #e8e8e8;
+}
+.text-rain {
+  color: #dbe8ff;
+}
+.text-drizzle {
+  color: #dff9fb;
+}
+.text-thunderstorm {
+  color: #f1c40f;
+}
+.text-snow {
+  color: #333;
+}
+.text-mist,
+.text-fog,
+.text-haze {
+  color: #eaeaea;
+}
+.text-smoke,
+.text-dust,
+.text-sand,
+.text-ash {
+  color: #f8f9fa;
+}
+.text-squall {
+  color: #f0f8ff;
+}
+.text-tornado {
+  color: #f5f5f5;
+}
+
+/* === CONTRASTE GENERAL DE TEXTO === */
+.card.background-thunderstorm,
+.card.background-clouds,
+.card.background-rain,
+.card.background-drizzle,
+.card.background-mist,
+.card.background-fog,
+.card.background-haze,
+.card.background-squall,
+.card.background-tornado {
+  color: #f8f9fa; /* texto blanco */
+}
+
+.card.background-clear,
+.card.background-snow,
+.card.background-smoke,
+.card.background-dust,
+.card.background-sand,
+.card.background-ash {
+  color: #222; /* texto oscuro */
 }
