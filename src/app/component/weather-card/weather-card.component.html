@@ -1,16 +1,16 @@
-<div class="card border border-0 mt-4 fondo-sunny">
+<div class="card border border-0 mt-4 {{ weatherStyle }}">
   <div class="card-body">
-    <h3 class="card-title">{{ city }}, ES</h3>
+    <h3 class="card-title">{{ city.name }}, {{ city.countryIso }}</h3>
     <h6 class="card-subtitle mb-2 text-body-secondary">{{ fechaActual }}</h6>
     <div class="text-center">
       <p class="fs-1 fw-bolder">
-        <span class="text-warning me-3"><i class="bi bi-sun-fill"></i></span>
-        <span>24ºC</span>
+        <span class="{{ weatherIconColor }} me-3"><i class="bi {{ weatherIcon }}"></i></span>
+        <span>{{ city.temperature }}ºC</span>
       </p>
       <div class="d-flex justify-content-between mt-2 mx-5">
-        <p>Sunny</p>
-        <p>Humidity: 20%</p>
-        <p>Wind: 15 km/h</p>
+        <p>{{ city.weather }}</p>
+        <p>Humidity: {{ city.humidity }}%</p>
+        <p>Wind: {{ city.wind }} km/h</p>
       </div>
     </div>
   </div>

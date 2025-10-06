@@ -2,7 +2,7 @@
   <section class="w-50">
     <app-search (citySelected)="onCitySelected($event)"></app-search>
     @if (selectedCity) {
-      <app-weather-card [city]="selectedCity.name"></app-weather-card>
+      <app-weather-card [city]="selectedCity"></app-weather-card>
     }
   </section>
 </div>
