@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { City } from '../models/city.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class WeatherService {
     { name: 'Sevilla', countryIso: 'ES', temperature: 28, weather: 'Clear', humidity: 35, wind: 8 }
   ];
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
   getCities(): City[] {
