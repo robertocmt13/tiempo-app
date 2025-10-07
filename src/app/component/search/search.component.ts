@@ -39,7 +39,6 @@ export class SearchComponent {
     this.hasSearched = true;
     this.weatherService.getWeatherByCity(this.cityInput).subscribe({
       next: (data: any) => {
-        console.log(data);
         const city: City = {
           name: data.name,
           countryIso: data.sys.country,
