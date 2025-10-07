@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { City } from '../models/city.model';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +20,10 @@ export class WeatherService {
 
   getCities(): City[] {
     return this.cities;
+  }
+
+  getWeatherByCity(city: string) {
+    const url = `${environment.weatherApiUrl}weather?q=${city}&appid=${environment.weatherApiKey}&units=metric`;
+    return this.http.get(url);
   }
 }

@@ -19,7 +19,7 @@ export class SearchComponent {
 
   constructor(private weatherService: WeatherService) {}
 
-  searchCity() {
+  /* searchCity() {
     if (!this.cityInput || this.cityInput.trim() === '') {
       this.hasSearched = false;
       this.filteredCities = [];
@@ -28,6 +28,33 @@ export class SearchComponent {
     this.hasSearched = true;
     this.filteredCities = this.weatherService.getCities()
       .filter(city => city.name.toLowerCase().includes(this.cityInput.toLowerCase()));
+  } */
+
+  searchCity() {
+    if (!this.cityInput || this.cityInput.trim() === '') {
+      this.hasSearched = false;
+      this.filteredCities = [];
+      return;
+    }
+    this.hasSearched = true;
+    this.weatherService.getWeatherByCity(this.cityInput).subscribe({
+      next: (data: any) => {
+        console.log(data);
+        const city: City = {
+          name: data.name,
+          countryIso: data.sys.country,
+          temperature: Math.round(data.main.temp),
+          weather: data.weather[0].main,
+          humidity: data.main.humidity,
+          wind: data.wind.speed
+        };
+        this.filteredCities = [city];
+      },
+      error: (err) => {
+        console.error('Error fetching weather data', err);
+        this.filteredCities = [];
+      }
+    });
   }
 
   onCitySelected(city: City) {
