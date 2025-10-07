@@ -40,7 +40,7 @@ Aplicación web desarrollada con Angular que permite consultar el clima actual d
 
 Inicia la aplicación en modo desarrollo:
 ```bash
-npm start
+ng serve
 ```
 
 Abre [http://localhost:4200](http://localhost:4200) en tu navegador.
